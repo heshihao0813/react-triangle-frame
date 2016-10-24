@@ -1,2 +1,2 @@
 # react-triangle-frame
-React high order component which adds a triangle frame to wrapped component
+React high-order component that adds a frame with a triangle pointer around to the wrapped component
