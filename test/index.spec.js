@@ -1,7 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { assert } from 'chai'
-import TriangleFrame from './'
+
+import TriangleFrame from '../src'
 
 describe('react-triangle-frame', () => {
     const Composed = () => (

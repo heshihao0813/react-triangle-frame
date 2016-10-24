@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "mocha -r babel-register src/**/*.spec.js",
+    "test": "mocha -r babel-register test/**/*.spec.js",
     "build": "babel src -d lib"
   },
   "repository": {
