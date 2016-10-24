@@ -2,11 +2,11 @@
   "name": "react-triangle-frame",
   "version": "1.0.0",
   "description": "React high-order component that adds a frame with a triangle pointer around the wrapper component",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "mocha -r babel-register ./src/**/*.spec.js",
-    "build": "webpack --progress --color -p"
+    "test": "mocha -r babel-register src/**/*.spec.js",
+    "build": "babel src -d lib"
   },
   "repository": {
     "url": "https://github.com/heshihao0813/react-triangle-frame",
@@ -15,19 +15,21 @@
   "author": "heshihao <heshihao.bn@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.17.0",
-    "babel-eslint": "^7.0.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "eslint": "^3.8.1",
-    "eslint-plugin-react": "^6.4.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
     "enzyme": "^2.5.1",
+    "eslint": "^3.8.1",
+    "eslint-plugin-react": "^6.4.1",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.3.2"
   }
