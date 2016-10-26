@@ -1,6 +1,6 @@
 {
   "name": "react-triangle-frame",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React high-order component that adds a frame with a triangle pointer around the wrapper component",
   "main": "lib/index.js",
   "scripts": {
