@@ -51,3 +51,9 @@ Border color of the frame.
 **[String]** = `top`
 
 Position of the triangle pointer, which could be `top`/`bottom`/`left`/`right`.
+
+###config.style###
+
+[Object]
+
+Override the default frame CSS.
