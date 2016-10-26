@@ -23,7 +23,10 @@ describe('react-triangle-frame', () => {
     it('should render frame with custom config', () => {
         const Wrapped = TriangleFrame({
             color: 'red',
-            borderColor: 'blue'
+            borderColor: 'blue',
+            style: {
+                padding: '10px'
+            }
         })(Composed)
         const wrapper = shallow(<Wrapped />)
 
@@ -37,6 +40,12 @@ describe('react-triangle-frame', () => {
             wrapper.first().node.props.style.borderColor,
             'blue',
             'should have the border color set to blue'
+        )
+
+        assert.strictEqual(
+            wrapper.first().node.props.style.padding,
+            '10px',
+            'should have the style overridden by custom config'
         )
     })
 })

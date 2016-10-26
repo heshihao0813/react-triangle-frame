@@ -10,6 +10,7 @@ const getStyles = (color, borderColor, position) => {
     return {
         box: {
             position: 'relative',
+            width: 'fit-content',
             backgroundColor: color,
             borderWidth: '1px',
             borderStyle: 'solid',
@@ -58,16 +59,20 @@ const TriangleFrame = config => {
     const {
         color='#fff',
         borderColor='rgba(0, 0, 0, 0.15)',
-        position='top'
+        position='top',
+        style={}
     } = config || {}
-    const styles = getStyles(color, borderColor, position)
+    const localStyles = getStyles(color, borderColor, position)
 
     return ComposedComponent => props => {
         return (
-            <div style={styles.box}>
-                <div style={styles.triangleContainer}>
-                    <div style={styles.triangleShadow} />
-                    <div style={styles.triangle} />
+            <div style={{
+                ...localStyles.box,
+                ...style
+            }}>
+                <div style={localStyles.triangleContainer}>
+                    <div style={localStyles.triangleShadow} />
+                    <div style={localStyles.triangle} />
                 </div>
                 <ComposedComponent {...props} />
             </div>
